@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
 def index(request):
-    return(render, "AppCurso/index.html")
+    return render(request, "AppCurso/index.html")
 
 def registro_alumnos(request):
-    return(render, "AppCurso/alumnos.html")
+    return render(request, "AppCurso/alumnos.html")
 
 def registro_profesores(request):
-    return(render, "AppCurso/profesores.html")
+    return render(request, "AppCurso/profesores.html")
 
 def entregables(request):
-    return(render, "AppCurso/entregables.html")
+    return render(request, "AppCurso/entregables.html")

@@ -22,7 +22,7 @@ class Profesor(models.Model):
 
 class Entregable(models.Model):
     nombre_alumno = models.CharField(max_length=40)
-    nombre_entregable = models.Charfiled (max_length=30)
+    nombre_entregable = models.CharField (max_length=30)
     curso = models.CharField(max_length=30)
     fecha_de_entrega = models.DateField(auto_now_add=True)
 

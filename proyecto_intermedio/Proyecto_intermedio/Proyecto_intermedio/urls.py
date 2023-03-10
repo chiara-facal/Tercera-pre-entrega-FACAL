@@ -19,8 +19,8 @@ from AppCurso.views import index, registro_alumnos, registro_profesores, entrega
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio', index),
-    path('registro-de-alumnos', registro_alumnos),
-    path('registro-de-profesores', registro_profesores),
-    path('entrega-de-tareas', entregables),
+    path('', index, name = "inicio"),
+    path('registro-de-alumnos', registro_alumnos, name="Registro-de-alumnos"),
+    path('registro-de-profesores', registro_profesores, name = "Registro-de-profesores"),
+    path('entrega-de-tareas', entregables, name="Entrega-de-tareas"),
 ]
