@@ -13,22 +13,19 @@
           <div class="container">
             <div class="carousel-caption text-start">
               <h1> REGISTRO DE ALUMNOS </h1>
+              <br>
+              <form action="" method="post">
+                {{Alumno.as_p}}
+                <input type="submit" value = "Agregar alumno">
+              </form>
+              <br>
+              <br>
               <h2>Alumnos registrados:</h2>
               <ul>
                 {% for alumno in alumnos_registrados %}
                 <li>{{alumno.nombre_completo}}- {{alumno.curso}}</li>
                 {% endfor %}
               </ul>
-
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
               <br>
               <br>
               <br>

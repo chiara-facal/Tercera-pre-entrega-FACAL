@@ -13,21 +13,19 @@
           <div class="container">
             <div class="carousel-caption text-start">
               <h1> REGISTRO DE PROFESORES </h1>
+              <br>
+              <form action="" method="post">
+                {{Profesor.as_p}}
+                <input type="submit" value="Agregar profesor">
+              </form>
+              <br>
+              <br>
               <h2>Profesores registrados:</h2>
               <ul>
                 {% for profesor in profesores_registrados%}
                 <li> {{profesor.nombre_completo}} - {{profesor.curso}}</li>
                 {% endfor %}
               </ul>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
               <br>
               <br>
               <br>
