@@ -27,4 +27,4 @@ class Entregable(models.Model):
     fecha_de_entrega = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return f'Muchas gracias {self.nombre_alumno}. Su devolución será realizada pronto'
+        return f'Trabajo de: {self.nombre_alumno}. Curso: {self.nombre_entregable}'

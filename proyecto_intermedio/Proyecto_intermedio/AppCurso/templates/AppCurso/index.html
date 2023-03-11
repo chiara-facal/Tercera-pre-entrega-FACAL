@@ -1,95 +1,51 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    {% load static %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.108.0">
-    <title>App Curso</title>
+{% extends "AppCurso/base.html" %} 
+{% load static %}
 
-    <link rel="stylesheet" href="{% static 'headers.css' %}">
+{%block main%}
 
-
-<link href="../../static/AppCurso/css/headers.css" rel="stylesheet">
-    <link href="headers.css" rel="stylesheet">
-  </head>
-  <body>
-
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">APP CURSO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Alumnos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Profesores</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Entregas</a>
-                  </li>
+</main>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    
+      
+        <div class="carousel-item active">
+            <img src = "https://s1.ppllstatics.com/elcorreo/www/multimedia/202006/07/media/cortadas/opi-portocarrero-kLeC-U110431176796zMD-1248x770@El%20Correo.jpg">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1> BIENVENIDO A APP CURSO </h1>
+              <h2>En esta página podrás: </h2>
+              <ul>
+                <li>Registrarte como alumno y hacer tus entregas.</li>
+                <li>Registarte como profesor.</li>
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
             </div>
           </div>
-        </nav>
-      </header>      
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          
-            
-              <div class="carousel-item active">
-                  <img src = "https://s1.ppllstatics.com/elcorreo/www/multimedia/202006/07/media/cortadas/opi-portocarrero-kLeC-U110431176796zMD-1248x770@El%20Correo.jpg">
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1> BIENVENIDO A APP CURSO </h1>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                  </div>
-                </div>
-              </div>
-            
-          
-            
+        </div>
+      
+        <footer class="container">
+          <p class="float-end"><a href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Back to top</a></p>
+          <p>© 2017–2021 Company, Inc. · <a href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Privacy</a> · <a href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Terms</a></p>
+        </footer>
 
 </main>
 
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
-  </body>
-</html>
+{% endblock %}
