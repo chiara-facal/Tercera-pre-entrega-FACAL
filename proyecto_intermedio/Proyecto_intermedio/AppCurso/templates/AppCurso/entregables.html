@@ -13,14 +13,12 @@
           <div class="container">
             <div class="carousel-caption text-start">
               <h1> ENTREGA DE TRABAJOS </h1>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+              <h2>Trabajos entregados:</h2>
+              <ul>
+                {% for trabajo in entrega_trabajo%}
+                <li>{{trabajo.nombre_alumno}} - {{trabajo.curso}}</li>
+                {% endfor %}
+              </ul>
               <br>
               <br>
               <br>
