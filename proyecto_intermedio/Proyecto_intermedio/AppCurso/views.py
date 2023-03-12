@@ -63,3 +63,11 @@ def agregar_entrega(request):
     }   
 
     return render(request, "AppCurso/entregables.html", context)
+
+def buscar_alumnos(request):
+    criterio = request.GET.get("criterio")
+    context = {
+        "personas": Alumno.objects.filter(nombre_completo__icontains=criterio).all(),
+    }
+
+    return render(request, "AppCurso/alumnos.html", context)
