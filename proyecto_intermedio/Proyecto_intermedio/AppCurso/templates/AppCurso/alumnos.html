@@ -14,7 +14,8 @@
             <div class="carousel-caption text-start">
               <h1> REGISTRO DE ALUMNOS </h1>
               <br>
-              <form action="" method="post">
+              <form action="{%url 'Agregar-alumno' %}" method="post">
+                {% csrf_token %} 
                 {{Alumno.as_p}}
                 <input type="submit" value = "Agregar alumno">
               </form>
@@ -26,13 +27,6 @@
                 <li>{{alumno.nombre_completo}}- {{alumno.curso}}</li>
                 {% endfor %}
               </ul>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
             </div>
           </div>
         </div>

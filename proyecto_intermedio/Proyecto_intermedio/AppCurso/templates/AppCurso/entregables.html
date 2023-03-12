@@ -14,7 +14,8 @@
             <div class="carousel-caption text-start">
               <h1> ENTREGA DE TRABAJOS </h1>
               <br>
-              <form action="" method="post">
+              <form action="{%url 'Agregar-trabajo'%}" method="post">
+                {% csrf_token %} 
                 {{Entrega_trabajo.as_p}}
                 <input type="submit" value="Realizar entrega">
               </form>
@@ -26,13 +27,6 @@
                 <li>{{trabajo.nombre_alumno}} - {{trabajo.curso}}</li>
                 {% endfor %}
               </ul>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
             </div>
           </div>
         </div>
