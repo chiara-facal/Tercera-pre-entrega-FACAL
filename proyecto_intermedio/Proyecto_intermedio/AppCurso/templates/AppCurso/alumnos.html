@@ -12,35 +12,28 @@
             <img src = "https://s1.ppllstatics.com/elcorreo/www/multimedia/202006/07/media/cortadas/opi-portocarrero-kLeC-U110431176796zMD-1248x770@El%20Correo.jpg">
           <div class="container">
             <div class="carousel-caption text-start">
-              {% if Alumno%}
-              <h1> REGISTRO DE ALUMNOS </h1>
-              <br>
-              <form action="{%url 'Agregar-alumno' %}" method="post">
-                {% csrf_token %} 
-                {{Alumno.as_p}}
-                <input type="submit" value = "Agregar alumno">
-              </form>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+              {% if Alumno %}
+                <h1> REGISTRO DE ALUMNOS </h1>
+                <br>
+                <form action="{%url 'Agregar-alumno' %}" method="post">
+                  {% csrf_token %} 
+                  {{Alumno.as_p}}
+                  <input type="submit" value = "Agregar alumno">
+                </form>
+                <br>
+                <br>
+                <br>
               {% else %}
-              <h1>Resultados de la búsqueda: </h1>
-              <br>
-              <br>
-              <ul>
-                {% for alumno in alumnos_registrados %}
-                <li>{{alumno.nombre_completo}}- {{alumno.curso}}</li>
-                {% endfor %}
-              </ul>
-              <br>
-              <br>
-              <br>
-              <br>
+                <h1>Resultados de la búsqueda: </h1>
               {% endif %}
+                <br>
+                <br>
+                <ul>
+                  <!-- {% for alumno in alumnos_registrados %}
+                  <li>{{alumno.nombre_completo}}- {{alumno.curso}}</li>
+                  {% endfor %} -->
+                </ul>
+              
             </div>
           </div>
         </div>
