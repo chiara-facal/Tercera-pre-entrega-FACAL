@@ -25,14 +25,16 @@
                 <br>
               {% else %}
                 <h1>Resultados de la búsqueda: </h1>
+                <ul>
+                  {% for alumno in alumnos_registrados %}
+                  <li>{{alumno.nombre_completo}}- {{alumno.curso}}</li>
+                  {% endfor %}
+                </ul>
+
               {% endif %}
                 <br>
                 <br>
-                <ul>
-                  <!-- {% for alumno in alumnos_registrados %}
-                  <li>{{alumno.nombre_completo}}- {{alumno.curso}}</li>
-                  {% endfor %} -->
-                </ul>
+               
               
             </div>
           </div>

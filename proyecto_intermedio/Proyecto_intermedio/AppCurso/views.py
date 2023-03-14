@@ -67,6 +67,6 @@ def agregar_entrega(request):
 def buscar_alumnos(request):
     criterio = request.GET.get("criterio")
     context = {
-        "personas": Alumno.objects.filter(nombre_completo__icontains=criterio).all()}
+        "alumnos_registrados": Alumno.objects.filter(nombre_completo__icontains=criterio).all()}
 
     return render(request, "AppCurso/alumnos.html", context)
