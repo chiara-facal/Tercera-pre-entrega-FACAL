@@ -1,0 +1,31 @@
+{% extends "AppCurso/base.html" %} 
+{% load static %}
+
+{%block main%}
+
+</main>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    
+      
+        <div class="carousel-item active">
+            <img src = "https://s1.ppllstatics.com/elcorreo/www/multimedia/202006/07/media/cortadas/opi-portocarrero-kLeC-U110431176796zMD-1248x770@El%20Correo.jpg">
+          <div class="container">
+            <div class="carousel-caption text-start">
+<form action="/buscar_alumnos/" method="GET">
+    <input type="text" name="nombre_completo" id="nombre_completo">
+
+    <input type="submit" name="Enviar">
+
+</form>
+</div>
+</div>
+</div>
+
+<footer class="container">
+<p class="float-end"><a href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Back to top</a></p>
+<p>© 2017–2021 Company, Inc. · <a href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Privacy</a> · <a href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Terms</a></p>
+</footer>
+
+</main>
+{% endblock %}

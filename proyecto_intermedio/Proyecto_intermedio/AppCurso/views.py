@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from AppCurso.models import Alumno, Profesor, Entregable
 from AppCurso.forms import AlumnoForm, ProfesorForm, TrabajoForm
+from django.http import HttpResponse
 
 def index(request):
     return render(request, "AppCurso/index.html")
@@ -65,8 +66,13 @@ def agregar_entrega(request):
     return render(request, "AppCurso/entregables.html", context)
 
 def buscar_alumnos(request):
-    criterio = request.GET.get("criterio")
-    context = {
-        "alumnos_registrados": Alumno.objects.filter(nombre_completo__icontains=criterio).all()}
+    if request.GET["nombre_completo"]:
+        nombre_completo = request.GET["nombre_completo"]
+        alumnos = Alumno.objects.filter(nombre_completo__icontains=nombre_completo)
+        return render(request, "AppCurso/resultados.html", {"alumnos":alumnos, "nombre_completo": nombre_completo})
+    else:
+        respuesta = "No enviaste datos"
+    return HttpResponse(respuesta)
 
-    return render(request, "AppCurso/alumnos.html", context)
+def busquedaAlumno(request):
+    return render(request, "AppCurso/busquedaAlumno.html")
